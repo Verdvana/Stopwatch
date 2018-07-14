@@ -1,0 +1,358 @@
+Analysis & Synthesis report for stopwatch
+Fri Jun 29 20:06:01 2018
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Jun 29 20:06:01 2018           ;
+; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Standard Edition ;
+; Revision Name                   ; stopwatch                                       ;
+; Top-level Entity Name           ; stopwatch                                       ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A                                             ;
+; Total registers                 ; 55                                              ;
+; Total pins                      ; 45                                              ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 0                                               ;
+; Total DSP Blocks                ; 0                                               ;
+; Total HSSI RX PCSs              ; 0                                               ;
+; Total HSSI PMA RX Deserializers ; 0                                               ;
+; Total HSSI TX PCSs              ; 0                                               ;
+; Total HSSI PMA TX Serializers   ; 0                                               ;
+; Total PLLs                      ; 0                                               ;
+; Total DLLs                      ; 0                                               ;
++---------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; stopwatch          ; stopwatch          ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                      ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path            ; Library ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------+---------+
+; stopwatch.v                      ; yes             ; User Verilog HDL File              ; E:/DE1-SoC/FPGA/stopwatch/stopwatch.v   ;         ;
+; stopwatch.bdf                    ; yes             ; User Block Diagram/Schematic File  ; E:/DE1-SoC/FPGA/stopwatch/stopwatch.bdf ;         ;
++----------------------------------+-----------------+------------------------------------+-----------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimate of Logic utilization (ALMs needed) ; 53        ;
+;                                             ;           ;
+; Combinational ALUT usage for logic          ; 102       ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 4         ;
+;     -- 5 input functions                    ; 1         ;
+;     -- 4 input functions                    ; 61        ;
+;     -- <=3 input functions                  ; 36        ;
+;                                             ;           ;
+; Dedicated logic registers                   ; 55        ;
+;                                             ;           ;
+; I/O pins                                    ; 45        ;
+;                                             ;           ;
+; Total DSP Blocks                            ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; rst~input ;
+; Maximum fan-out                             ; 29        ;
+; Total fan-out                               ; 619       ;
+; Average fan-out                             ; 2.51      ;
++---------------------------------------------+-----------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                           ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
+; |stopwatch                 ; 102 (0)             ; 55 (0)                    ; 0                 ; 0          ; 45   ; 0            ; |stopwatch                 ; stopwatch   ; work         ;
+;    |clock:inst|            ; 31 (31)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |stopwatch|clock:inst      ; clock       ; work         ;
+;    |cnt10:inst4|           ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |stopwatch|cnt10:inst4     ; cnt10       ; work         ;
+;    |cnt21600:inst9|        ; 4 (4)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |stopwatch|cnt21600:inst9  ; cnt21600    ; work         ;
+;    |cnt36000:inst8|        ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |stopwatch|cnt36000:inst8  ; cnt36000    ; work         ;
+;    |cnt3600:inst7|         ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |stopwatch|cnt3600:inst7   ; cnt3600     ; work         ;
+;    |cnt600:inst6|          ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |stopwatch|cnt600:inst6    ; cnt600      ; work         ;
+;    |cnt60:inst5|           ; 5 (5)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |stopwatch|cnt60:inst5     ; cnt60       ; work         ;
+;    |segment0:inst2|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |stopwatch|segment0:inst2  ; segment0    ; work         ;
+;    |segment1:inst3|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |stopwatch|segment1:inst3  ; segment1    ; work         ;
+;    |segment2:inst1|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |stopwatch|segment2:inst1  ; segment2    ; work         ;
+;    |segment3:inst0|        ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |stopwatch|segment3:inst0  ; segment3    ; work         ;
+;    |segment4:inst10|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |stopwatch|segment4:inst10 ; segment4    ; work         ;
+;    |segment5:inst11|       ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |stopwatch|segment5:inst11 ; segment5    ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 55    ;
+; Number of registers using Synchronous Clear  ; 25    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 49    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 5     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 55                          ;
+;     CLR               ; 24                          ;
+;     CLR SCLR          ; 25                          ;
+;     ENA               ; 5                           ;
+;     plain             ; 1                           ;
+; arriav_lcell_comb     ; 108                         ;
+;     arith             ; 25                          ;
+;         1 data inputs ; 25                          ;
+;     normal            ; 83                          ;
+;         1 data inputs ; 12                          ;
+;         3 data inputs ; 5                           ;
+;         4 data inputs ; 61                          ;
+;         5 data inputs ; 1                           ;
+;         6 data inputs ; 4                           ;
+; boundary_port         ; 45                          ;
+;                       ;                             ;
+; Max LUT depth         ; 3.40                        ;
+; Average LUT depth     ; 1.94                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Standard Edition
+    Info: Processing started: Fri Jun 29 20:05:48 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off stopwatch -c stopwatch
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 13 design units, including 13 entities, in source file stopwatch.v
+    Info (12023): Found entity 1: clock File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 1
+    Info (12023): Found entity 2: cnt10 File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 24
+    Info (12023): Found entity 3: cnt60 File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 41
+    Info (12023): Found entity 4: cnt600 File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 57
+    Info (12023): Found entity 5: cnt3600 File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 75
+    Info (12023): Found entity 6: cnt36000 File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 92
+    Info (12023): Found entity 7: cnt21600 File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 110
+    Info (12023): Found entity 8: segment0 File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 129
+    Info (12023): Found entity 9: segment1 File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 153
+    Info (12023): Found entity 10: segment2 File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 178
+    Info (12023): Found entity 11: segment3 File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 202
+    Info (12023): Found entity 12: segment4 File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 227
+    Info (12023): Found entity 13: segment5 File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 251
+Info (12021): Found 1 design units, including 1 entities, in source file stopwatch.bdf
+    Info (12023): Found entity 1: stopwatch
+Warning (10236): Verilog HDL Implicit Net warning at stopwatch.v(133): created implicit net for "scan" File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 133
+Warning (10236): Verilog HDL Implicit Net warning at stopwatch.v(157): created implicit net for "scan" File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 157
+Warning (10236): Verilog HDL Implicit Net warning at stopwatch.v(182): created implicit net for "scan" File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 182
+Warning (10236): Verilog HDL Implicit Net warning at stopwatch.v(206): created implicit net for "scan" File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 206
+Warning (10236): Verilog HDL Implicit Net warning at stopwatch.v(231): created implicit net for "scan" File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 231
+Warning (10236): Verilog HDL Implicit Net warning at stopwatch.v(255): created implicit net for "scan" File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 255
+Info (12127): Elaborating entity "stopwatch" for the top level hierarchy
+Info (12128): Elaborating entity "segment0" for hierarchy "segment0:inst2"
+Warning (10036): Verilog HDL or VHDL warning at stopwatch.v(133): object "scan" assigned a value but never read File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 133
+Warning (10230): Verilog HDL assignment warning at stopwatch.v(133): truncated value with size 4 to match size of target (1) File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 133
+Info (12128): Elaborating entity "cnt10" for hierarchy "cnt10:inst4"
+Warning (10230): Verilog HDL assignment warning at stopwatch.v(36): truncated value with size 32 to match size of target (4) File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 36
+Info (12128): Elaborating entity "clock" for hierarchy "clock:inst"
+Warning (10230): Verilog HDL assignment warning at stopwatch.v(18): truncated value with size 32 to match size of target (25) File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 18
+Info (12128): Elaborating entity "segment1" for hierarchy "segment1:inst3"
+Warning (10036): Verilog HDL or VHDL warning at stopwatch.v(157): object "scan" assigned a value but never read File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 157
+Warning (10230): Verilog HDL assignment warning at stopwatch.v(157): truncated value with size 4 to match size of target (1) File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 157
+Info (12128): Elaborating entity "cnt60" for hierarchy "cnt60:inst5"
+Warning (10230): Verilog HDL assignment warning at stopwatch.v(53): truncated value with size 32 to match size of target (4) File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 53
+Info (12128): Elaborating entity "segment2" for hierarchy "segment2:inst1"
+Warning (10036): Verilog HDL or VHDL warning at stopwatch.v(182): object "scan" assigned a value but never read File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 182
+Warning (10230): Verilog HDL assignment warning at stopwatch.v(182): truncated value with size 4 to match size of target (1) File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 182
+Info (12128): Elaborating entity "cnt600" for hierarchy "cnt600:inst6"
+Warning (10230): Verilog HDL assignment warning at stopwatch.v(69): truncated value with size 32 to match size of target (4) File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 69
+Info (12128): Elaborating entity "segment3" for hierarchy "segment3:inst0"
+Warning (10036): Verilog HDL or VHDL warning at stopwatch.v(206): object "scan" assigned a value but never read File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 206
+Warning (10230): Verilog HDL assignment warning at stopwatch.v(206): truncated value with size 4 to match size of target (1) File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 206
+Info (12128): Elaborating entity "cnt3600" for hierarchy "cnt3600:inst7"
+Warning (10230): Verilog HDL assignment warning at stopwatch.v(87): truncated value with size 32 to match size of target (4) File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 87
+Info (12128): Elaborating entity "segment4" for hierarchy "segment4:inst10"
+Warning (10036): Verilog HDL or VHDL warning at stopwatch.v(231): object "scan" assigned a value but never read File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 231
+Warning (10230): Verilog HDL assignment warning at stopwatch.v(231): truncated value with size 4 to match size of target (1) File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 231
+Info (12128): Elaborating entity "cnt36000" for hierarchy "cnt36000:inst8"
+Warning (10230): Verilog HDL assignment warning at stopwatch.v(104): truncated value with size 32 to match size of target (4) File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 104
+Info (12128): Elaborating entity "segment5" for hierarchy "segment5:inst11"
+Warning (10036): Verilog HDL or VHDL warning at stopwatch.v(255): object "scan" assigned a value but never read File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 255
+Warning (10230): Verilog HDL assignment warning at stopwatch.v(255): truncated value with size 4 to match size of target (1) File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 255
+Info (12128): Elaborating entity "cnt21600" for hierarchy "cnt21600:inst9"
+Warning (10230): Verilog HDL assignment warning at stopwatch.v(122): truncated value with size 32 to match size of target (4) File: E:/DE1-SoC/FPGA/stopwatch/stopwatch.v Line: 122
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 147 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 42 output pins
+    Info (21061): Implemented 102 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
+    Info: Peak virtual memory: 4852 megabytes
+    Info: Processing ended: Fri Jun 29 20:06:01 2018
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:31
+
+

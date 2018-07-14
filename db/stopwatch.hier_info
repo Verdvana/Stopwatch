@@ -1,0 +1,314 @@
+|stopwatch
+HEX0[0] <= segment0:inst2.HEX0[0]
+HEX0[1] <= segment0:inst2.HEX0[1]
+HEX0[2] <= segment0:inst2.HEX0[2]
+HEX0[3] <= segment0:inst2.HEX0[3]
+HEX0[4] <= segment0:inst2.HEX0[4]
+HEX0[5] <= segment0:inst2.HEX0[5]
+HEX0[6] <= segment0:inst2.HEX0[6]
+pause => cnt10:inst4.pause
+pause => clock:inst.pause
+pause => cnt60:inst5.pause
+pause => cnt600:inst6.pause
+pause => cnt3600:inst7.pause
+pause => cnt36000:inst8.pause
+pause => cnt21600:inst9.pause
+clk => clock:inst.clk
+rst => cnt10:inst4.rst
+rst => cnt60:inst5.rst
+rst => cnt600:inst6.rst
+rst => cnt3600:inst7.rst
+rst => cnt36000:inst8.rst
+rst => cnt21600:inst9.rst
+HEX1[0] <= segment1:inst3.HEX1[0]
+HEX1[1] <= segment1:inst3.HEX1[1]
+HEX1[2] <= segment1:inst3.HEX1[2]
+HEX1[3] <= segment1:inst3.HEX1[3]
+HEX1[4] <= segment1:inst3.HEX1[4]
+HEX1[5] <= segment1:inst3.HEX1[5]
+HEX1[6] <= segment1:inst3.HEX1[6]
+HEX2[0] <= segment2:inst1.HEX0[0]
+HEX2[1] <= segment2:inst1.HEX0[1]
+HEX2[2] <= segment2:inst1.HEX0[2]
+HEX2[3] <= segment2:inst1.HEX0[3]
+HEX2[4] <= segment2:inst1.HEX0[4]
+HEX2[5] <= segment2:inst1.HEX0[5]
+HEX2[6] <= segment2:inst1.HEX0[6]
+HEX3[0] <= segment3:inst0.HEX1[0]
+HEX3[1] <= segment3:inst0.HEX1[1]
+HEX3[2] <= segment3:inst0.HEX1[2]
+HEX3[3] <= segment3:inst0.HEX1[3]
+HEX3[4] <= segment3:inst0.HEX1[4]
+HEX3[5] <= segment3:inst0.HEX1[5]
+HEX3[6] <= segment3:inst0.HEX1[6]
+HEX4[0] <= segment4:inst10.HEX0[0]
+HEX4[1] <= segment4:inst10.HEX0[1]
+HEX4[2] <= segment4:inst10.HEX0[2]
+HEX4[3] <= segment4:inst10.HEX0[3]
+HEX4[4] <= segment4:inst10.HEX0[4]
+HEX4[5] <= segment4:inst10.HEX0[5]
+HEX4[6] <= segment4:inst10.HEX0[6]
+HEX5[0] <= segment5:inst11.HEX1[0]
+HEX5[1] <= segment5:inst11.HEX1[1]
+HEX5[2] <= segment5:inst11.HEX1[2]
+HEX5[3] <= segment5:inst11.HEX1[3]
+HEX5[4] <= segment5:inst11.HEX1[4]
+HEX5[5] <= segment5:inst11.HEX1[5]
+HEX5[6] <= segment5:inst11.HEX1[6]
+
+
+|stopwatch|segment0:inst2
+cnt[0] => Decoder0.IN3
+cnt[1] => Decoder0.IN2
+cnt[2] => Decoder0.IN1
+cnt[3] => Decoder0.IN0
+HEX0[0] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|stopwatch|cnt10:inst4
+pause => ~NO_FANOUT~
+clk => out~reg0.CLK
+clk => cnt[0]~reg0.CLK
+clk => cnt[1]~reg0.CLK
+clk => cnt[2]~reg0.CLK
+clk => cnt[3]~reg0.CLK
+rst => cnt[0]~reg0.ACLR
+rst => cnt[1]~reg0.ACLR
+rst => cnt[2]~reg0.ACLR
+rst => cnt[3]~reg0.ACLR
+rst => out~reg0.ENA
+cnt[0] <= cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[1] <= cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[2] <= cnt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[3] <= cnt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|stopwatch|clock:inst
+clk => clk_1hz~reg0.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+clk => cnt[20].CLK
+clk => cnt[21].CLK
+clk => cnt[22].CLK
+clk => cnt[23].CLK
+clk => cnt[24].CLK
+pause => cnt[0].ACLR
+pause => cnt[1].ACLR
+pause => cnt[2].ACLR
+pause => cnt[3].ACLR
+pause => cnt[4].ACLR
+pause => cnt[5].ACLR
+pause => cnt[6].ACLR
+pause => cnt[7].ACLR
+pause => cnt[8].ACLR
+pause => cnt[9].ACLR
+pause => cnt[10].ACLR
+pause => cnt[11].ACLR
+pause => cnt[12].ACLR
+pause => cnt[13].ACLR
+pause => cnt[14].ACLR
+pause => cnt[15].ACLR
+pause => cnt[16].ACLR
+pause => cnt[17].ACLR
+pause => cnt[18].ACLR
+pause => cnt[19].ACLR
+pause => cnt[20].ACLR
+pause => cnt[21].ACLR
+pause => cnt[22].ACLR
+pause => cnt[23].ACLR
+pause => cnt[24].ACLR
+pause => clk_1hz~reg0.ENA
+rst => ~NO_FANOUT~
+clk_1hz <= clk_1hz~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|stopwatch|segment1:inst3
+cnt[0] => Decoder0.IN3
+cnt[1] => Decoder0.IN2
+cnt[2] => Decoder0.IN1
+cnt[3] => Decoder0.IN0
+HEX1[0] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[1] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|stopwatch|cnt60:inst5
+pause => ~NO_FANOUT~
+clk => out~reg0.CLK
+clk => cnt[0]~reg0.CLK
+clk => cnt[1]~reg0.CLK
+clk => cnt[2]~reg0.CLK
+clk => cnt[3]~reg0.CLK
+rst => cnt[0]~reg0.ACLR
+rst => cnt[1]~reg0.ACLR
+rst => cnt[2]~reg0.ACLR
+rst => cnt[3]~reg0.ACLR
+rst => out~reg0.ENA
+cnt[0] <= cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[1] <= cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[2] <= cnt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[3] <= cnt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|stopwatch|segment2:inst1
+cnt[0] => Decoder0.IN3
+cnt[1] => Decoder0.IN2
+cnt[2] => Decoder0.IN1
+cnt[3] => Decoder0.IN0
+HEX0[0] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|stopwatch|cnt600:inst6
+pause => ~NO_FANOUT~
+clk => out~reg0.CLK
+clk => cnt[0]~reg0.CLK
+clk => cnt[1]~reg0.CLK
+clk => cnt[2]~reg0.CLK
+clk => cnt[3]~reg0.CLK
+rst => cnt[0]~reg0.ACLR
+rst => cnt[1]~reg0.ACLR
+rst => cnt[2]~reg0.ACLR
+rst => cnt[3]~reg0.ACLR
+rst => out~reg0.ENA
+cnt[0] <= cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[1] <= cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[2] <= cnt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[3] <= cnt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|stopwatch|segment3:inst0
+cnt[0] => Decoder0.IN3
+cnt[1] => Decoder0.IN2
+cnt[2] => Decoder0.IN1
+cnt[3] => Decoder0.IN0
+HEX1[0] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[1] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|stopwatch|cnt3600:inst7
+pause => ~NO_FANOUT~
+clk => out~reg0.CLK
+clk => cnt[0]~reg0.CLK
+clk => cnt[1]~reg0.CLK
+clk => cnt[2]~reg0.CLK
+clk => cnt[3]~reg0.CLK
+rst => cnt[0]~reg0.ACLR
+rst => cnt[1]~reg0.ACLR
+rst => cnt[2]~reg0.ACLR
+rst => cnt[3]~reg0.ACLR
+rst => out~reg0.ENA
+cnt[0] <= cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[1] <= cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[2] <= cnt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[3] <= cnt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|stopwatch|segment4:inst10
+cnt[0] => Decoder0.IN3
+cnt[1] => Decoder0.IN2
+cnt[2] => Decoder0.IN1
+cnt[3] => Decoder0.IN0
+HEX0[0] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[1] <= HEX0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX0[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|stopwatch|cnt36000:inst8
+pause => ~NO_FANOUT~
+clk => out~reg0.CLK
+clk => cnt[0]~reg0.CLK
+clk => cnt[1]~reg0.CLK
+clk => cnt[2]~reg0.CLK
+clk => cnt[3]~reg0.CLK
+rst => cnt[0]~reg0.ACLR
+rst => cnt[1]~reg0.ACLR
+rst => cnt[2]~reg0.ACLR
+rst => cnt[3]~reg0.ACLR
+rst => out~reg0.ENA
+cnt[0] <= cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[1] <= cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[2] <= cnt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[3] <= cnt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|stopwatch|segment5:inst11
+cnt[0] => Decoder0.IN3
+cnt[1] => Decoder0.IN2
+cnt[2] => Decoder0.IN1
+cnt[3] => Decoder0.IN0
+HEX1[0] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[1] <= HEX1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+HEX1[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|stopwatch|cnt21600:inst9
+pause => ~NO_FANOUT~
+clk => out~reg0.CLK
+clk => cnt[0]~reg0.CLK
+clk => cnt[1]~reg0.CLK
+clk => cnt[2]~reg0.CLK
+clk => cnt[3]~reg0.CLK
+rst => cnt[0]~reg0.ACLR
+rst => cnt[1]~reg0.ACLR
+rst => cnt[2]~reg0.ACLR
+rst => cnt[3]~reg0.ACLR
+rst => out~reg0.ENA
+cnt[0] <= cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[1] <= cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[2] <= cnt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[3] <= cnt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out <= out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
